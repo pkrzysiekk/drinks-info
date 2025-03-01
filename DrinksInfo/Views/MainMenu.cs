@@ -2,11 +2,7 @@
 using DrinksInfo.Model;
 using DrinksInfo.Models;
 using Spectre.Console;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DrinksInfo.Views
 {
@@ -35,7 +31,6 @@ namespace DrinksInfo.Views
                     .UseConverter(x => x.Name)   
             );
             AnsiConsole.MarkupLine($"You have selected [bold]{drink.Name}[/]");
-            AnsiConsole.Markup(drink.Id);
             drinks = await _drinksController.GetResponseList<Drink,Drinks>($"https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i={drink.Id}");
             drink=drinks.FirstOrDefault();
             AnsiConsole.MarkupLine($"[Blue]{drink.Instructions}[/]");

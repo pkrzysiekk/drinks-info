@@ -1,12 +1,7 @@
-﻿using DrinksInfo.Model;
-using DrinksInfo.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using DrinksInfo.Models;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
+
 
 namespace DrinksInfo.Controllers
 {

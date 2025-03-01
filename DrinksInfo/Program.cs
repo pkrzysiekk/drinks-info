@@ -1,8 +1,5 @@
-﻿using DrinksInfo.Controllers;
-using DrinksInfo.Model;
-using DrinksInfo.Views;
-using System.Net.Http.Headers;
-using System.Text.Json;
+﻿using DrinksInfo.Views;
+
 
 namespace DrinksInfo
 {
