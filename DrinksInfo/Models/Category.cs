@@ -1,6 +1,5 @@
 ﻿using System.Text.Json.Serialization;
 
-
 namespace DrinksInfo.Model
 {
     public class Category

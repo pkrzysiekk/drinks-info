@@ -1,4 +1,5 @@
 ﻿using DrinksInfo.Models;
+using Spectre.Console;
 using System.Net.Http.Headers;
 using System.Text.Json;
 
@@ -17,8 +18,9 @@ namespace DrinksInfo.Controllers
         }
         public async Task<ICollection<T>> GetResponseList<T, K>(string url)
         {
-            await using Stream stream =
-            await _client.GetStreamAsync(url);
+           await using Stream stream =
+           await _client.GetStreamAsync(url);
+
             var response =
                 await JsonSerializer.DeserializeAsync<K>(stream);
             List<T> list = response.GetType()
